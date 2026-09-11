@@ -51,6 +51,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.question.is-fading {
+  opacity: 0;
 }
 
 .next-button {
@@ -63,15 +69,30 @@ body {
   color: #fff;
   background: var(--accent);
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(74, 109, 95, 0.25);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .next-button:hover {
   background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(74, 109, 95, 0.3);
 }
 
 .next-button:active {
   transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(74, 109, 95, 0.25);
+}
+
+.next-button:focus-visible {
+  outline: 3px solid rgba(74, 109, 95, 0.35);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .question {
+    transition: none;
+  }
 }
 
 @media (max-width: 400px) {
