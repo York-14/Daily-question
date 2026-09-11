@@ -1,0 +1,85 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f3ef;
+  --card-bg: #ffffff;
+  --text: #2b2b2b;
+  --accent: #4a6d5f;
+  --accent-hover: #3a5a4c;
+  --label: #8a8a8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--label);
+  text-transform: uppercase;
+}
+
+.question {
+  margin: 0 0 40px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 600;
+  min-height: 3.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.next-button:hover {
+  background: var(--accent-hover);
+}
+
+.next-button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 36px 20px;
+  }
+
+  .question {
+    font-size: 1.3rem;
+  }
+}
