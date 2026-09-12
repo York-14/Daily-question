@@ -7,13 +7,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
+  <button id="menuButton" class="menu-button" type="button" aria-label="メニュー" aria-expanded="false">☰</button>
+  <nav id="menuPanel" class="menu-panel" hidden>
+    <p class="menu-title">メニュー</p>
+    <button type="button" class="menu-item" data-view="today">今日の問い</button>
+    <button type="button" class="menu-item" data-view="history">回答履歴</button>
+  </nav>
+
+  <main id="todayView" class="card">
     <p class="label">今日の問い</p>
     <h1 id="question" class="question">読み込み中...</h1>
     <button id="nextButton" class="next-button">次の問い</button>
+
+    <form id="answerForm" class="answer-form">
+      <textarea id="answerInput" class="answer-input" placeholder="ここに今日の回答を入力してください" rows="4"></textarea>
+      <button type="submit" class="save-button">保存する</button>
+      <p id="saveFeedback" class="save-feedback" role="status" aria-live="polite"></p>
+    </form>
   </main>
 
+  <section id="historyView" class="card history-card" hidden>
+    <p class="label">回答履歴</p>
+    <ul id="historyList" class="history-list"></ul>
+    <p id="historyEmpty" class="history-empty" hidden>まだ回答が保存されていません。</p>
+  </section>
+
   <script src="questions.js"></script>
+  <script src="db.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

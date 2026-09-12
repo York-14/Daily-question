@@ -104,3 +104,160 @@ body {
     font-size: 1.3rem;
   }
 }
+
+/* メニュー */
+
+.menu-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 20;
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  line-height: 1;
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-panel {
+  position: fixed;
+  top: 66px;
+  left: 16px;
+  z-index: 20;
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 12px;
+  min-width: 160px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.menu-title {
+  margin: 0 0 8px;
+  padding: 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--label);
+  text-transform: uppercase;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  appearance: none;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: var(--bg);
+}
+
+/* 回答フォーム */
+
+.answer-form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  resize: vertical;
+}
+
+.answer-input:focus-visible {
+  outline: 3px solid rgba(74, 109, 95, 0.35);
+  outline-offset: 2px;
+}
+
+.save-button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  align-self: center;
+}
+
+.save-button:hover {
+  background: var(--accent-hover);
+}
+
+.save-feedback {
+  min-height: 1.2em;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* 回答履歴 */
+
+.history-card {
+  text-align: left;
+}
+
+.history-card .label {
+  text-align: center;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+.history-meta {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  color: var(--label);
+}
+
+.history-question {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.history-answer {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.history-empty {
+  text-align: center;
+  color: var(--label);
+}
